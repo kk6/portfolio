@@ -1,65 +1,30 @@
+import { Text, Code, Image, AspectRatio } from "@chakra-ui/react"
+import { Container, Flex, Heading, Link } from "@chakra-ui/layout"
 import Head from "next/head"
-import styles from "../styles/Home.module.css"
+
+import Header from "./components/header"
+import Footer from "./components/footer"
+
+const imageUrl =
+  "https://64.media.tumblr.com/bf03dcb1f7bfe6ed41864b31130b56d9/e770c7bf6ca9cd59-40/s1280x1920/a98979999f9e07a879f5acc25116398479fb2d68.png"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Container maxW="container.xl">
       <Head>
-        <title>Create Next App</title>
+        <title>Ashiyahiro.work</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <Header />
+      <Container height="100vh">
+        <Heading as="h1" size="2xl" mb="2">
+          工事中です
+        </Heading>
+        <AspectRatio ratio={1}>
+          <Image src={imageUrl} alt="cover-image" objectFit="cover" />
+        </AspectRatio>
+      </Container>
+      <Footer />
+    </Container>
   )
 }
