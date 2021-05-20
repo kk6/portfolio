@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Flex, Box, Text } from "@chakra-ui/react"
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons"
-import Link from "next/Link"
+import Link from "next/link"
 
 interface MenuItemProps {
   children: React.ReactNode
@@ -36,7 +36,9 @@ const Header = (props) => {
     >
       <Box w="200px">
         <Text fontSize="lg" fontWeight="bold">
-          Ashiyahiro.work
+          <Link href="/">
+            <a>Ashiyahiro.work</a>
+          </Link>
         </Text>
       </Box>
 
@@ -55,6 +57,7 @@ const Header = (props) => {
           pt={[4, 4, 0, 0]}
         >
           <MenuItem to="/">Home</MenuItem>
+          <MenuItem to="/illustrations">Illustrations</MenuItem>
           <MenuItem to="/about">About</MenuItem>
           <MenuItem to="/contact">Contact</MenuItem>
           <MenuItem to="/search" isLast>

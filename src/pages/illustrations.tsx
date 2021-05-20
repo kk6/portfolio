@@ -1,10 +1,12 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
-
+import { Container } from "@chakra-ui/layout"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { SRLWrapper } from "simple-react-lightbox"
 
 import { IllustrationsResponse } from "../types/illustrations"
 import { client } from "../utils/api"
+import Header from "../components/header"
+import Footer from "../components/footer"
 
 type StaticProps = {
   illustrations: IllustrationsResponse
@@ -12,20 +14,22 @@ type StaticProps = {
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 const Illustration: NextPage<PageProps> = (props) => {
-  const columnsCountBreakPoints = { 350: 4, 750: 5, 900: 6 }
+  const columnsCountBreakPoints = { 350: 3, 750: 4, 900: 5 }
 
   return (
-    <div>
+    <Container maxW="container.xl">
+      <Header />
       <SRLWrapper>
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
-          <Masonry gutter={4}>
+          <Masonry gutter="4px">
             {props.illustrations.contents.map((i) => (
               <img key={i.id} src={i.image.url} alt={i.title} />
             ))}
           </Masonry>
         </ResponsiveMasonry>
       </SRLWrapper>
-    </div>
+      <Footer />
+    </Container>
   )
 }
 
