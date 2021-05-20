@@ -4,7 +4,7 @@ import { AppProps } from "next/app"
 import SimpleReactLightbox from "simple-react-lightbox"
 import SEO from "../../next-seo.config"
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <ChakraProvider>
       <SimpleReactLightbox>

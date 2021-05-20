@@ -21,7 +21,7 @@ const MenuItem = ({ children, isLast, to = "/" }: MenuItemProps) => {
   )
 }
 
-const Header = (props) => {
+const Header: React.FC = () => {
   const [show, setShow] = useState(false)
   const toggleMenu = () => setShow(!show)
   return (
@@ -57,7 +57,7 @@ const Header = (props) => {
           pt={[4, 4, 0, 0]}
         >
           <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/illustrations">Illustrations</MenuItem>
+          <MenuItem to="/illustrations">Illustration</MenuItem>
           <MenuItem to="/about">About</MenuItem>
           <MenuItem to="/contact" isLast>
             Contact
