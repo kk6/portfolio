@@ -1,5 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import Image from "next/image"
+import { NextSeo } from "next-seo"
 import { Container } from "@chakra-ui/layout"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { SRLWrapper } from "simple-react-lightbox"
@@ -8,6 +9,10 @@ import { IllustrationsResponse } from "../types/illustrations"
 import { client } from "../utils/api"
 import Header from "../components/header"
 import Footer from "../components/footer"
+
+const url = "https://ashiyahiro-portfolio.vercel.app/illustrations"
+const title = "Illustrations"
+const description = "作品一覧"
 
 type StaticProps = {
   illustrations: IllustrationsResponse
@@ -19,6 +24,16 @@ const Illustration: NextPage<PageProps> = (props) => {
 
   return (
     <Container maxW="container.xl">
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description,
+        }}
+      />
       <Header />
       <SRLWrapper>
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
