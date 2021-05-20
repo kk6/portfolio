@@ -59,9 +59,8 @@ const Header = (props) => {
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/illustrations">Illustrations</MenuItem>
           <MenuItem to="/about">About</MenuItem>
-          <MenuItem to="/contact">Contact</MenuItem>
-          <MenuItem to="/search" isLast>
-            Search
+          <MenuItem to="/contact" isLast>
+            Contact
           </MenuItem>
         </Flex>
       </Box>
