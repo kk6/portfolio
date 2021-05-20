@@ -2,13 +2,11 @@ import { Container, Heading, VStack, Text } from "@chakra-ui/layout"
 import { Avatar } from "@chakra-ui/react"
 import { NextPage } from "next"
 
-import Footer from "../components/footer"
-import Header from "../components/header"
+import Layout from "../components/layout"
 
 const About: NextPage = () => {
   return (
-    <Container maxW="container.xl">
-      <Header />
+    <Layout>
       <Container centerContent>
         <VStack spacing={4}>
           <Heading as="h1">About</Heading>
@@ -45,8 +43,7 @@ const About: NextPage = () => {
           </VStack>
         </VStack>
       </Container>
-      <Footer />
-    </Container>
+    </Layout>
   )
 }
 

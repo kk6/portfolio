@@ -2,8 +2,7 @@ import { Container, Heading } from "@chakra-ui/layout"
 import { Image, AspectRatio } from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
 
-import Footer from "../components/footer"
-import Header from "../components/header"
+import Layout from "../components/layout"
 
 const url = "https://ashiyahiro-portfolio.vercel.app"
 const title = "Home"
@@ -13,7 +12,7 @@ const imageUrl =
 
 export default function Home() {
   return (
-    <Container maxW="container.xl">
+    <Layout>
       <NextSeo
         title={title}
         description={description}
@@ -24,7 +23,6 @@ export default function Home() {
           description,
         }}
       />
-      <Header />
       <Container height="100vh">
         <Heading as="h1" size="2xl" mb="2">
           工事中です
@@ -33,7 +31,6 @@ export default function Home() {
           <Image src={imageUrl} alt="cover-image" objectFit="cover" />
         </AspectRatio>
       </Container>
-      <Footer />
-    </Container>
+    </Layout>
   )
 }

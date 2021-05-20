@@ -1,12 +1,10 @@
-import { Container } from "@chakra-ui/layout"
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { NextSeo } from "next-seo"
 import Image from "next/image"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { SRLWrapper } from "simple-react-lightbox"
 
-import Footer from "../components/footer"
-import Header from "../components/header"
+import Layout from "../components/layout"
 import { IllustrationsResponse } from "../types/illustrations"
 import { client } from "../utils/api"
 
@@ -23,7 +21,7 @@ const Illustration: NextPage<PageProps> = (props) => {
   const columnsCountBreakPoints = { 350: 3, 750: 4, 900: 5 }
 
   return (
-    <Container maxW="container.xl">
+    <Layout>
       <NextSeo
         title={title}
         description={description}
@@ -34,7 +32,6 @@ const Illustration: NextPage<PageProps> = (props) => {
           description,
         }}
       />
-      <Header />
       <SRLWrapper>
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
           <Masonry gutter="4px">
@@ -50,8 +47,7 @@ const Illustration: NextPage<PageProps> = (props) => {
           </Masonry>
         </ResponsiveMasonry>
       </SRLWrapper>
-      <Footer />
-    </Container>
+    </Layout>
   )
 }
 

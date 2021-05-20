@@ -1,18 +1,15 @@
 import { Container, Text } from "@chakra-ui/layout"
 import { NextPage } from "next"
 
-import Footer from "../components/footer"
-import Header from "../components/header"
+import Layout from "../components/layout"
 
 const Contact: NextPage = () => {
   return (
-    <Container maxW="container.xl">
-      <Header />
+    <Layout>
       <Container centerContent>
         <Text>Coming soon...</Text>
       </Container>
-      <Footer />
-    </Container>
+    </Layout>
   )
 }
 
