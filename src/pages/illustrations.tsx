@@ -1,4 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
+import Image from "next/image"
 import { Container } from "@chakra-ui/layout"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { SRLWrapper } from "simple-react-lightbox"
@@ -23,7 +24,13 @@ const Illustration: NextPage<PageProps> = (props) => {
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
           <Masonry gutter="4px">
             {props.illustrations.contents.map((i) => (
-              <img key={i.id} src={i.image.url} alt={i.title} />
+              <Image
+                key={i.id}
+                src={i.image.url}
+                alt={i.title}
+                width={i.image.width}
+                height={i.image.height}
+              />
             ))}
           </Masonry>
         </ResponsiveMasonry>
