@@ -9,6 +9,5 @@ const fetchConfig: Required<Parameters<typeof aspida>>[1] = {
     "X-API-KEY": process.env.MICRO_CMS_API_KEY ?? "",
   },
 }
-console.log(process.env.MICRO_CMS_HOST)
 
 export const client = api(aspida(fetch, fetchConfig))
