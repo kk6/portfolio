@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
     "api:build": "aspida",
     "vercel": "vercel"
@@ -31,6 +32,8 @@
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-unused-imports": "^1.1.1",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4",
     "vercel": "^22.0.1"

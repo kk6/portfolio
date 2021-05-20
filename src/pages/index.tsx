@@ -1,9 +1,9 @@
-import { Image, AspectRatio } from "@chakra-ui/react"
 import { Container, Heading } from "@chakra-ui/layout"
+import { Image, AspectRatio } from "@chakra-ui/react"
 import { NextSeo } from "next-seo"
 
-import Header from "../components/header"
 import Footer from "../components/footer"
+import Header from "../components/header"
 
 const url = "https://ashiyahiro-portfolio.vercel.app"
 const title = "Home"

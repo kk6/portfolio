@@ -1,6 +1,6 @@
-import { AppProps } from "next/app"
-import { DefaultSeo } from "next-seo"
 import { ChakraProvider, CSSReset } from "@chakra-ui/react"
+import { DefaultSeo } from "next-seo"
+import { AppProps } from "next/app"
 import SimpleReactLightbox from "simple-react-lightbox"
 import SEO from "../../next-seo.config"
 
