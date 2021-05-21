@@ -12,7 +12,7 @@ type Inputs = {
   body: string
 }
 
-const HookForm: React.FC = (): React.ReactElement => {
+const ContactForm: React.FC = (): React.ReactElement => {
   const {
     register,
     handleSubmit,
@@ -73,4 +73,4 @@ const HookForm: React.FC = (): React.ReactElement => {
   )
 }
 
-export default HookForm
+export default ContactForm

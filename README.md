@@ -70,7 +70,7 @@ API 作成のステップ 3 でスキーマを定義する際、`microcms/` 以�
 npm run vercel dev
 ```
 
-これで http://localhost:3000 にアクセス 😋
+これで [http://localhost:3000](http://localhost:3000) にアクセス 😋
 
 ## ライブラリとか
 

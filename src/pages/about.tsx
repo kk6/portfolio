@@ -1,12 +1,27 @@
 import { Container, Heading, VStack, Text } from "@chakra-ui/layout"
 import { Avatar } from "@chakra-ui/react"
 import { NextPage } from "next"
+import { NextSeo } from "next-seo"
 
 import Layout from "../components/layout"
+
+const url = "https://ashiyahiro-portfolio.vercel.app/about"
+const title = "About"
+const description = "あしやひろについて"
 
 const About: NextPage = () => {
   return (
     <Layout>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description,
+        }}
+      />
       <Container>
         <VStack spacing={4}>
           <Heading as="h1">About</Heading>
@@ -14,11 +29,7 @@ const About: NextPage = () => {
             あしやひろについて
           </Heading>
 
-          <Avatar
-            size="2xl"
-            name="あしやひろ"
-            src="https://pbs.twimg.com/profile_images/1367519282100236291/WaS_iU_r_400x400.jpg"
-          />
+          <Avatar size="2xl" name="あしやひろ" src="/icon.jpg" />
 
           <VStack spacing={4} alignItems="left">
             <Text>
