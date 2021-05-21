@@ -52,12 +52,12 @@ const HookForm: React.FC = (): React.ReactElement => {
       <VStack minWidth="600px">
         <FormControl id="email">
           <FormLabel htmlFor="email">メールアドレス</FormLabel>
-          <Input {...register("email", { required: true })} />
+          <Input type="email" {...register("email", { required: true })} />
           {errors.email?.type === "required" && "email is required"}
         </FormControl>
         <FormControl id="name">
           <FormLabel htmlFor="email">お名前</FormLabel>
-          <Input {...register("name", { required: true })} />
+          <Input type="text" {...register("name", { required: true })} />
           {errors.name?.type === "required" && "name is required"}
         </FormControl>
         <FormControl id="body">
