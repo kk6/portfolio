@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+あしやのポートフォリオです: [ashiyahiro-portfolio.vercel.app](https://ashiyahiro-portfolio.vercel.app/)
 
-First, run the development server:
+## ローカルで動かす
+
+### 1. リポジトリをクローンする
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/kk6/portfolio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. 依存ライブラリのインストール
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 3. vercel と連携する
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`vercel` コマンド初回実行時にメール認証によるプロジェクトリンクが行われる。対話形式で進めていく。
 
-## Learn More
+```bash
+npm run vercel
+```
 
-To learn more about Next.js, take a look at the following resources:
+#### 参照
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Vercel CLI Reference - Project Linking](https://vercel.com/docs/cli#commands/overview/project-linking)
+- [Vercel CLI の基本的な使い方](https://blog.kimizuy.dev/posts/how-to-use-vercel-cli)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 4. `.env` ファイルを作成する
 
-## Deploy on Vercel
+vercel と連携したら、以下のコマンドを実行して環境変数をそれぞれ追加する。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run vercel env add
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+設定するのは以下の 4 つ
+
+- `NEXT_PUBLIC_MICRO_CMS_WRITE_API_KEY` : MicroCMS の`X-WRITE-API-KEY`
+- `MICRO_CMS_WRITE_API_KEY`: 同上
+- `MICRO_CMS_API_KEY` : MicroCMS の `X-API-KEY`
+- `MICRO_CMS_HOST` : `https://yourdomain.microcms.io/api/v1/`
+
+全部追加し終わったら、vercel から pull
+
+```bash
+npm run vercel env pull
+```
+
+これで `.env` ファイルが生成される。新たに環境変数を追加したらその都度 `pull` すれば更新される。
+
+### 5. MicroCMS で API を作成
+
+MicroCMS の管理画面で API を作成する。エンドポイントは以下の 3 つ。
+
+| API 名       | エンドポイント   | API の型     |
+| ------------ | ---------------- | ------------ |
+| サイトデータ | `/sitedata`      | オブジェクト |
+| イラスト     | `/illustrations` | リスト       |
+| お問い合わせ | `/contacts`      | リスト       |
+
+API 作成のステップ 3 でスキーマを定義する際、`microcms/` 以下の json をインポートする。インポート方法は公式ドキュメント [API スキーマのインポート](https://document.microcms.io/manual/export-and-import-api-schema#hf95e7cc83a) を参照。
+
+### 6. 開発サーバー起動
+
+```bash
+npm run vercel dev
+```
+
+これで http://localhost:3000 にアクセス 😋
+
+## ライブラリとか
+
+- JS Framework: [Next.js](https://nextjs.org/)
+- CSS Framework: [Chakra-UI](https://chakra-ui.com/)
+- Headless CMS: [MicroCMS](https://microcms.io/)
+- Deployment: [Vercel](https://vercel.com/)
