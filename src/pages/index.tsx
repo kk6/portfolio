@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           description,
         }}
       />
-      <Container height="100vh">
+      <Container>
         <Heading as="h1" size="2xl" mb="2">
           工事中です
         </Heading>
