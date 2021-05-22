@@ -5,6 +5,9 @@ import React from "react"
 export const Hero: React.VFC = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
+      <Flex justifyContent="center" alignItems="center">
+        <Avatar size="2xl" name="あしやひろ" src="/icon.jpg" />
+      </Flex>
       <Flex
         direction="column"
         alignItems="start"
@@ -23,9 +26,6 @@ export const Hero: React.VFC = () => {
             <NextLink href="/about">こちら</NextLink>
           </Link>
         </Text>
-      </Flex>
-      <Flex justifyContent="center" alignItems="center">
-        <Avatar size="2xl" name="あしやひろ" src="/icon.jpg" />
       </Flex>
     </SimpleGrid>
   )
