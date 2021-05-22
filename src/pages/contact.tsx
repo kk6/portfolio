@@ -3,7 +3,7 @@ import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 
 import { ContactForm } from "../components/contact-form"
-import Layout from "../components/layout"
+import { Layout } from "../components/layout"
 
 const url = "https://ashiyahiro-portfolio.vercel.app/contact"
 const title = "Contact"

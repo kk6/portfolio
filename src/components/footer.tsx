@@ -39,7 +39,7 @@ export const SocialMediaLinks = (props: ButtonGroupProps): JSX.Element => (
   </ButtonGroup>
 )
 
-const Footer: React.FC = (): React.ReactElement => (
+export const Footer: React.FC = (): React.ReactElement => (
   <Box
     as="footer"
     role="contentinfo"
@@ -54,5 +54,3 @@ const Footer: React.FC = (): React.ReactElement => (
     </Stack>
   </Box>
 )
-
-export default Footer

@@ -21,7 +21,7 @@ const MenuItem = ({ children, isLast, to = "/" }: MenuItemProps) => {
   )
 }
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const [show, setShow] = useState(false)
   const toggleMenu = () => setShow(!show)
   return (
@@ -67,5 +67,3 @@ const Header: React.FC = () => {
     </Flex>
   )
 }
-
-export default Header

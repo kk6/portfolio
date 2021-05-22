@@ -1,8 +1,9 @@
-import { Container, Heading } from "@chakra-ui/layout"
+import { Container } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
+import { Hero } from "../components/hero"
 
-import Layout from "../components/layout"
+import { Layout } from "../components/layout"
 
 const url = "https://ashiyahiro-portfolio.vercel.app"
 const title = "Home"
@@ -21,10 +22,8 @@ const Home: NextPage = () => {
           description,
         }}
       />
-      <Container>
-        <Heading as="h1" size="2xl" mb="2">
-          工事中です
-        </Heading>
+      <Container maxW="container.lg">
+        <Hero />
       </Container>
     </Layout>
   )
