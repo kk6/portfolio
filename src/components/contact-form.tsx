@@ -49,7 +49,7 @@ export const ContactForm: React.FC = (): React.ReactElement => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <VStack minWidth="600px">
+      <VStack width="60vw">
         <FormControl id="email" isInvalid={errors.email !== undefined}>
           <FormLabel htmlFor="email">メールアドレス</FormLabel>
           <Input type="email" {...register("email", { required: true })} />
