@@ -2,7 +2,7 @@ import { Heading, VStack } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 
-import ContactForm from "../components/contact-form"
+import { ContactForm } from "../components/contact-form"
 import Layout from "../components/layout"
 
 const url = "https://ashiyahiro-portfolio.vercel.app/contact"

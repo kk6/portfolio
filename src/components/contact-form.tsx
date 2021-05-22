@@ -1,33 +1,33 @@
-import { Button } from "@chakra-ui/button"
-import { FormControl, FormLabel } from "@chakra-ui/form-control"
+import { Button, ButtonGroup } from "@chakra-ui/button"
+import {
+  FormControl,
+  FormErrorMessage,
+  FormLabel,
+} from "@chakra-ui/form-control"
 import { Input } from "@chakra-ui/input"
 import { VStack } from "@chakra-ui/layout"
 import { Textarea } from "@chakra-ui/textarea"
+import Router from "next/router"
 import React from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
-type Inputs = {
+const post_url = "https://ashiyahiro.microcms.io/api/v1/contacts"
+type FormValues = {
   email: string
   name: string
   body: string
 }
 
-const ContactForm: React.FC = (): React.ReactElement => {
+export const ContactForm: React.FC = (): React.ReactElement => {
   const {
     register,
     handleSubmit,
-    watch,
-    reset,
-    formState: { errors },
-  } = useForm<Inputs>()
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>()
 
-  const email = watch("email")
-  const name = watch("name")
-  const body = watch("body")
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
     return new Promise((resolve) => {
-      fetch("https://ashiyahiro.microcms.io/api/v1/contacts", {
+      fetch(post_url, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -37,8 +37,8 @@ const ContactForm: React.FC = (): React.ReactElement => {
         },
       })
         .then(() => {
-          reset()
           alert("お問い合わせを受け付けました")
+          Router.reload()
         })
         .catch((err) => {
           alert(err)
@@ -50,27 +50,36 @@ const ContactForm: React.FC = (): React.ReactElement => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <VStack minWidth="600px">
-        <FormControl id="email">
+        <FormControl id="email" isInvalid={errors.email !== undefined}>
           <FormLabel htmlFor="email">メールアドレス</FormLabel>
           <Input type="email" {...register("email", { required: true })} />
-          {errors.email?.type === "required" && "email is required"}
+          <FormErrorMessage>
+            {errors.email?.type === "required" && "必須項目です"}
+          </FormErrorMessage>
         </FormControl>
-        <FormControl id="name">
+        <FormControl id="name" isInvalid={errors.name !== undefined}>
           <FormLabel htmlFor="email">お名前</FormLabel>
           <Input type="text" {...register("name", { required: true })} />
-          {errors.name?.type === "required" && "name is required"}
+          <FormErrorMessage>
+            {errors.name?.type === "required" && "必須項目です"}
+          </FormErrorMessage>
         </FormControl>
-        <FormControl id="body">
+        <FormControl id="body" isInvalid={errors.body !== undefined}>
           <FormLabel htmlFor="email">お問い合わせ内容</FormLabel>
-          <Textarea {...register("body", { required: true })} />
-          {errors.body?.type === "required" && "body is required"}
+          <Textarea
+            placeholder="お仕事のご依頼の場合はなるべく詳細にお書きください。"
+            {...register("body", { required: true })}
+          />
+          <FormErrorMessage>
+            {errors.body?.type === "required" && "必須項目です"}
+          </FormErrorMessage>
         </FormControl>
-        <Button type="submit" colorScheme="teal" variant="outline">
-          送信
-        </Button>
+        <ButtonGroup>
+          <Button type="submit" isLoading={isSubmitting} colorScheme="blue">
+            送信
+          </Button>
+        </ButtonGroup>
       </VStack>
     </form>
   )
 }
-
-export default ContactForm
