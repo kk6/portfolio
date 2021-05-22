@@ -74,7 +74,18 @@ npm run vercel dev
 
 ## ライブラリとか
 
-- JS Framework: [Next.js](https://nextjs.org/)
-- CSS Framework: [Chakra-UI](https://chakra-ui.com/)
-- Headless CMS: [MicroCMS](https://microcms.io/)
-- Deployment: [Vercel](https://vercel.com/)
+- JS フレームワーク
+  - [Next.js](https://nextjs.org/)
+- CSS フレームワーク
+  - [Chakra-UI](https://chakra-ui.com/)
+- フォームライブラリ
+  - [React Hook Form](https://react-hook-form.com/jp/)
+- イラストギャラリー
+  - [react-responsive-masonry](https://cedricdelpoux.github.io/react-responsive-masonry/)
+    - [Masonry](https://masonry.desandro.com/) の React 版。Pinterest 風に画像を整列。
+  - [Simple React Lightbox](https://simple-react-lightbox.dev/)
+    - Lightbox ライブラリ。スライド機能とか付いてる。
+- ヘッドレス CMS
+  - [MicroCMS](https://microcms.io/)
+- デプロイ
+  - [Vercel](https://vercel.com/)
