@@ -23,6 +23,7 @@ declare module "simple-react-lightbox" {
 
   interface SRLWrapperProps {
     elements?: SRLWrapperElement[]
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     options?: Record<string, any>
   }
 
