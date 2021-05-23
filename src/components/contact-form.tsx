@@ -8,7 +8,6 @@ import { Input } from "@chakra-ui/input"
 import { VStack } from "@chakra-ui/layout"
 import { Textarea } from "@chakra-ui/textarea"
 import Router from "next/router"
-import React from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
 const post_url = "https://ashiyahiro.microcms.io/api/v1/contacts"
@@ -25,16 +24,20 @@ export const ContactForm: React.FC = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>()
 
+  const requestHeaders: HeadersInit = new Headers()
+  requestHeaders.set("Accept", "application/json")
+  requestHeaders.set("Content-Type", "application/json")
+  requestHeaders.set(
+    "X-WRITE-API-KEY",
+    process.env.NEXT_PUBLIC_MICRO_CMS_WRITE_API_KEY || ""
+  )
+
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     return new Promise((resolve) => {
       fetch(post_url, {
         method: "POST",
         body: JSON.stringify(data),
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "X-WRITE-API-KEY": process.env.NEXT_PUBLIC_MICRO_CMS_WRITE_API_KEY,
-        },
+        headers: requestHeaders,
       })
         .then(() => {
           alert("お問い合わせを受け付けました")

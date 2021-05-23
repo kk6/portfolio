@@ -1,6 +1,5 @@
 import { Container } from "@chakra-ui/layout"
 import { motion } from "framer-motion"
-import React from "react"
 
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"

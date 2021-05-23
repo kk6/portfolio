@@ -1,7 +1,6 @@
 import { Heading, VStack } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
-
 import { ContactForm } from "../components/contact-form"
 import { Layout } from "../components/layout"
 

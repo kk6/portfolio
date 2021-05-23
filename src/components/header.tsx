@@ -1,7 +1,7 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons"
 import { Flex, Box, Text } from "@chakra-ui/react"
 import Link from "next/link"
-import React, { useState } from "react"
+import { useState } from "react"
 
 interface MenuItemProps {
   children: React.ReactNode

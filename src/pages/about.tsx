@@ -3,7 +3,6 @@ import { Container, Heading, VStack, Text, Box } from "@chakra-ui/layout"
 import { Avatar, Link, ListItem, UnorderedList } from "@chakra-ui/react"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
-
 import { Layout } from "../components/layout"
 
 const url = "https://ashiyahiro-portfolio.vercel.app/about"
@@ -82,7 +81,7 @@ const About: NextPage = () => {
                     isExternal
                   >
                     Animals Pedal Custom Illustrated Major Overdrive by
-                    あしやひろ "ボブカット" 筐体表面イラスト
+                    あしやひろ &quot;ボブカット&ldquo; 筐体表面イラスト
                     <ExternalLinkIcon mx="2px" />
                   </Link>
                 </ListItem>
@@ -92,7 +91,7 @@ const About: NextPage = () => {
                     isExternal
                   >
                     Animals Pedal Custom Illustrated Major Overdrive by
-                    あしやひろ "Alice" 筐体表面イラスト
+                    あしやひろ &quot;Alice&ldquo; 筐体表面イラスト
                     <ExternalLinkIcon mx="2px" />
                   </Link>
                 </ListItem>

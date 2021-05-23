@@ -1,6 +1,5 @@
 import { Flex, SimpleGrid, Avatar, Heading, Text, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
-import React from "react"
 
 export const Hero: React.FC = () => {
   return (

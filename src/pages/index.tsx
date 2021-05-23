@@ -2,7 +2,6 @@ import { Container } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 import { Hero } from "../components/hero"
-
 import { Layout } from "../components/layout"
 
 const url = "https://ashiyahiro-portfolio.vercel.app"
