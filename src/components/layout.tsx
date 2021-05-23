@@ -5,7 +5,7 @@ import React from "react"
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
 
-export const Layout: React.FC = ({ children }): React.ReactElement => (
+export const Layout: React.FC = ({ children }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}

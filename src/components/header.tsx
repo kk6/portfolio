@@ -9,7 +9,7 @@ interface MenuItemProps {
   to: string
 }
 
-const MenuItem = ({ children, isLast, to = "/" }: MenuItemProps) => {
+const MenuItem: React.FC<MenuItemProps> = ({ children, isLast, to = "/" }) => {
   return (
     <Text
       mb={{ base: isLast ? 0 : 8, sm: 0 }}

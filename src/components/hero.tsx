@@ -2,7 +2,7 @@ import { Flex, SimpleGrid, Avatar, Heading, Text, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
 import React from "react"
 
-export const Hero: React.VFC = () => {
+export const Hero: React.FC = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
       <Flex justifyContent="center" alignItems="center">

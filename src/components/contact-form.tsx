@@ -18,7 +18,7 @@ type FormValues = {
   body: string
 }
 
-export const ContactForm: React.FC = (): React.ReactElement => {
+export const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,

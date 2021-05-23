@@ -4,13 +4,13 @@ import React from "react"
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa"
 import { SiPixiv } from "react-icons/si"
 
-const Copyright = (props: TextProps) => (
+const Copyright: React.FC<TextProps> = (props) => (
   <Text fontSize="sm" {...props}>
     &copy; {new Date().getFullYear()} あしやひろ All rights reserved.
   </Text>
 )
 
-export const SocialMediaLinks = (props: ButtonGroupProps): JSX.Element => (
+export const SocialMediaLinks: React.FC<ButtonGroupProps> = (props) => (
   <ButtonGroup variant="ghost" color="gray.600" {...props}>
     <IconButton
       as="a"
@@ -39,7 +39,7 @@ export const SocialMediaLinks = (props: ButtonGroupProps): JSX.Element => (
   </ButtonGroup>
 )
 
-export const Footer: React.FC = (): React.ReactElement => (
+export const Footer: React.FC = () => (
   <Box
     as="footer"
     role="contentinfo"

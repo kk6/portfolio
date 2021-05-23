@@ -9,7 +9,7 @@ type ImageGalleryProps = {
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   illustrations,
-}): JSX.Element => {
+}) => {
   const columnsCountBreakPoints = { 350: 3, 750: 4, 900: 5 }
 
   return (
