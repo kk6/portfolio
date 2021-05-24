@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
         </Text>
         <Text p={2}>
           詳細なプロフィールは
-          <Link color="blue.500" textDecoration="underline">
+          <Link as="span" color="blue.500" textDecoration="underline">
             <NextLink href="/about">こちら</NextLink>
           </Link>
         </Text>
