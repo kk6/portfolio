@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    "cypress/globals": true,
   },
   extends: [
     "eslint:recommended",
@@ -10,6 +11,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:cypress/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -27,6 +29,7 @@ module.exports = {
     "@typescript-eslint",
     "import",
     "unused-imports",
+    "cypress",
   ],
   root: true,
   rules: {
