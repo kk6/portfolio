@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "@chakra-ui/icons"
 import { Flex, SimpleGrid, Avatar, Heading, Text, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
 
@@ -20,9 +21,13 @@ export const Hero: React.FC = () => {
           愛媛県出身、東京都在住。都内某社でWEB開発業務に従事。本業の傍ら、イラストレーターとしても活動中。主には同人活動ですが、商業イラストの依頼も受付可能です。
         </Text>
         <Text p={2}>
-          詳細なプロフィールは
-          <Link as="span" color="blue.500" textDecoration="underline">
-            <NextLink href="/about">こちら</NextLink>
+          <Link as="b" color="purple.500">
+            <NextLink href="/about">
+              <Text>
+                詳細なプロフィールを見る{" "}
+                <ArrowRightIcon w={3} verticalAlign="middle" />
+              </Text>
+            </NextLink>
           </Link>
         </Text>
       </Flex>

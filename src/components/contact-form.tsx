@@ -78,7 +78,7 @@ export const ContactForm: React.FC = () => {
           </FormErrorMessage>
         </FormControl>
         <ButtonGroup>
-          <Button type="submit" isLoading={isSubmitting} colorScheme="blue">
+          <Button type="submit" isLoading={isSubmitting} colorScheme="purple">
             送信
           </Button>
         </ButtonGroup>
