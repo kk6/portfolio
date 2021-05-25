@@ -23,10 +23,10 @@ export const Hero: React.FC = () => {
         <Text p={2}>
           <Link as="b" color="purple.500">
             <NextLink href="/about">
-              <Text>
+              <span>
                 詳細なプロフィールを見る{" "}
                 <ArrowRightIcon w={3} verticalAlign="middle" />
-              </Text>
+              </span>
             </NextLink>
           </Link>
         </Text>
