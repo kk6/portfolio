@@ -10,6 +10,8 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
     "test": "jest src/__tests__/.*/*.test.tsx?$",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "api:build": "aspida",
     "vercel": "vercel"
   },
@@ -36,6 +38,7 @@
     "@types/react-dom": "^17.0.5",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
+    "cypress": "^7.4.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-import": "^2.23.2",
