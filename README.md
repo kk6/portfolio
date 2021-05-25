@@ -89,3 +89,9 @@ npm run vercel dev
   - [MicroCMS](https://microcms.io/)
 - デプロイ
   - [Vercel](https://vercel.com/)
+- Unit テスト
+  - [Jest](https://jestjs.io/)
+- Integration テスト
+  - [React Testing Library](https://testing-library.com)
+- E2E テスト
+  - [Cypress](https://www.cypress.io/)
