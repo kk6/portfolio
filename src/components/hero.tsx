@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
       <Flex justifyContent="center" alignItems="center">
-        <Avatar src="/icon.jpg" alt="あしやひろ" width={128} height={128} />
+        <Avatar src="/icon.webp" alt="あしやひろ" width={128} height={128} />
       </Flex>
       <Flex
         direction="column"

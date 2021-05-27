@@ -62,7 +62,7 @@ const About: NextPage = () => {
             あしやひろについて
           </Heading>
 
-          <Avatar src="/icon.jpg" alt="あしやひろ" width={128} height={128} />
+          <Avatar src="/icon.webp" alt="あしやひろ" width={128} height={128} />
 
           <VStack spacing={4} alignItems="left">
             <Box as="section" padding={1}>
