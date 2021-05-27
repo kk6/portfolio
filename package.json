@@ -13,7 +13,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "api:build": "aspida",
-    "vercel": "vercel"
+    "vercel": "vercel",
+    "bundle-analyzer": "ANALYZE=true next build"
   },
   "dependencies": {
     "@aspida/fetch": "^1.7.0",
@@ -32,6 +33,7 @@
     "simple-react-lightbox": "^3.6.6"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^10.2.3",
     "@testing-library/react": "^11.2.7",
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.3",
