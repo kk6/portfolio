@@ -41,6 +41,8 @@ module.exports = {
     "react/prop-types": "off",
     // Next.js では不要
     "react/react-in-jsx-scope": "off",
+    // 「// @ts-ignore」使っても怒られないようにする
+    "@typescript-eslint/ban-ts-comment": "off",
   },
   settings: {
     "import/resolver": {

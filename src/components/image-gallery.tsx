@@ -1,7 +1,12 @@
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import { SRLWrapper } from "simple-react-lightbox"
 import { IllustrationResponse } from "../types/illustrations"
+
+// @ts-ignore
+const SRLWrapper = dynamic(() =>
+  import("simple-react-lightbox").then((mod) => mod.SRLWrapper)
+)
 
 type ImageGalleryProps = {
   illustrations: IllustrationResponse[]

@@ -2,8 +2,10 @@ import { ChakraProvider, CSSReset } from "@chakra-ui/react"
 import { AnimateSharedLayout } from "framer-motion"
 import { DefaultSeo } from "next-seo"
 import { AppProps } from "next/app"
-import SimpleReactLightbox from "simple-react-lightbox"
+import dynamic from "next/dynamic"
 import SEO from "../../next-seo.config"
+
+const SimpleReactLightbox = dynamic(() => import("simple-react-lightbox"))
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
