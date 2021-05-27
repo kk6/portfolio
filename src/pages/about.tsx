@@ -1,7 +1,7 @@
 import { Container, Heading, VStack, Text, Box } from "@chakra-ui/layout"
-import { Avatar } from "@chakra-ui/react"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
+import { Avatar } from "../components/avatar"
 import { Layout } from "../components/layout"
 import { ListBox } from "../components/list-box"
 
@@ -62,7 +62,7 @@ const About: NextPage = () => {
             あしやひろについて
           </Heading>
 
-          <Avatar size="2xl" name="あしやひろ" src="/icon.jpg" />
+          <Avatar src="/icon.jpg" alt="あしやひろ" width={128} height={128} />
 
           <VStack spacing={4} alignItems="left">
             <Box as="section" padding={1}>

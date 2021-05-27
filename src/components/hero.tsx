@@ -1,12 +1,13 @@
 import { ArrowRightIcon } from "@chakra-ui/icons"
-import { Flex, SimpleGrid, Avatar, Heading, Text, Link } from "@chakra-ui/react"
+import { Flex, SimpleGrid, Heading, Text, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
+import { Avatar } from "../components/avatar"
 
 export const Hero: React.FC = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0}>
       <Flex justifyContent="center" alignItems="center">
-        <Avatar size="2xl" name="あしやひろ" src="/icon.jpg" />
+        <Avatar src="/icon.jpg" alt="あしやひろ" width={128} height={128} />
       </Flex>
       <Flex
         direction="column"
