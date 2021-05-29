@@ -22,14 +22,14 @@ export const Hero: React.FC = () => {
           愛媛県出身、東京都在住。都内某社でWEB開発業務に従事。本業の傍ら、イラストレーターとしても活動中。主には同人活動ですが、商業イラストの依頼も受付可能です。
         </Text>
         <Text p={2}>
-          <Link as="b" color="purple.500">
-            <NextLink href="/about">
-              <span>
+          <NextLink href="/about" passHref>
+            <Link color="purple.500">
+              <b>
                 詳細なプロフィールを見る{" "}
                 <ArrowRightIcon w={3} verticalAlign="middle" />
-              </span>
-            </NextLink>
-          </Link>
+              </b>
+            </Link>
+          </NextLink>
         </Text>
       </Flex>
     </SimpleGrid>
