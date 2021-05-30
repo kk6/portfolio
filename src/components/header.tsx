@@ -58,6 +58,7 @@ export const Header: React.FC = () => {
         >
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/illustrations">Illustration</MenuItem>
+          <MenuItem to="/blog">Blog</MenuItem>
           <MenuItem to="/about">About</MenuItem>
           <MenuItem to="/contact" isLast>
             Contact

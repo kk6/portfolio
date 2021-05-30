@@ -1,10 +1,11 @@
 import { ContentsResponse, ContentResponse } from "./api"
+import { TextField } from "./fields"
 import { ImageResponse } from "./image"
 
 export type IllustrationsResponse = ContentsResponse<IllustrationResponse>
 
 export type IllustrationResponse = ContentResponse<{
-  title: string
+  title: TextField
   image: ImageResponse
   postedAt: string
 }>
