@@ -5,5 +5,4 @@ export type CategoriesResponse = ContentsResponse<CategoryResponse>
 
 export type CategoryResponse = ContentResponse<{
   name: TextField
-  slug: TextField
 }>
