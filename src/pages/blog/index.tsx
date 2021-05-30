@@ -57,7 +57,7 @@ const Blogs: NextPage<PageProps> = (props) => {
                     description={p.description ? p.description : p.body}
                     postedAt={p.publishedAt}
                     category={p.category.name}
-                    slug={p.slug}
+                    id={p.id}
                   />
                 </ListItem>
               ))

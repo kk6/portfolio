@@ -6,11 +6,11 @@ import styles from "../../styles/blog-card.module.css"
 import { formatDate } from "../utils/date"
 
 type BlogCardProps = {
+  id: string
   title: string
   description: string
   postedAt: string
   category: string
-  slug: string
 }
 
 export const BlogCard: React.FC<BlogCardProps> = (props) => {
@@ -38,7 +38,7 @@ export const BlogCard: React.FC<BlogCardProps> = (props) => {
         overflow="hidden"
       >
         <Heading size="md" p={2}>
-          <Link href={`/blog/${props.slug}`}>{props.title}</Link>
+          <Link href={`/blog/${props.id}`}>{props.title}</Link>
         </Heading>
         <Text p={2} className={styles.text}>
           {props.description}
