@@ -3,6 +3,7 @@ import { Text, Heading } from "@chakra-ui/react"
 import Link from "next/link"
 import { BsFolder } from "react-icons/bs"
 import styles from "../../styles/blog-card.module.css"
+import { formatDate } from "../utils/date"
 
 type BlogCardProps = {
   title: string
@@ -21,7 +22,7 @@ export const BlogCard: React.FC<BlogCardProps> = (props) => {
         display={{ base: "flex", md: "block" }}
       >
         <Text fontSize="sm" p={2}>
-          {props.postedAt}
+          {formatDate(props.postedAt)}
         </Text>
         <Flex alignItems="center" ml={4}>
           <BsFolder />

@@ -12,4 +12,5 @@ export type BlogResponse = ContentResponse<{
   ogimage?: ImageResponse
   description?: TextField
   related_blog?: BlogResponse[]
+  slug: TextField
 }>
