@@ -1,6 +1,7 @@
 import { Container } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
+
 import { Hero } from "../components/hero"
 import { Layout } from "../components/layout"
 import { SITE_URL } from "../constants"

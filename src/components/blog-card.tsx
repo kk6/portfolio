@@ -1,7 +1,8 @@
 import { Box, Flex } from "@chakra-ui/layout"
-import { Text, Heading } from "@chakra-ui/react"
+import { Heading,Text } from "@chakra-ui/react"
 import Link from "next/link"
 import { BsFolder } from "react-icons/bs"
+
 import styles from "../../styles/blog-card.module.css"
 import { formatDate } from "../utils/date"
 

@@ -1,5 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { NextSeo } from "next-seo"
+
 import { ImageGallery } from "../components/image-gallery"
 import { Layout } from "../components/layout"
 import { SITE_URL } from "../constants"

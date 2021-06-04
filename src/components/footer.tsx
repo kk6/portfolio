@@ -1,6 +1,6 @@
 import { Box, Stack, Text, TextProps } from "@chakra-ui/layout"
 import { ButtonGroup, ButtonGroupProps, IconButton } from "@chakra-ui/react"
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaGithub, FaInstagram,FaTwitter } from "react-icons/fa"
 import { SiPixiv } from "react-icons/si"
 import { AUTHOR_NAME } from "../constants"
 

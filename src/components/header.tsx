@@ -1,5 +1,5 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons"
-import { Flex, Box, Text } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 import Link from "next/link"
 import { useState } from "react"
 import { SITE_NAME } from "../constants"

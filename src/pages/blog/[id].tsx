@@ -1,13 +1,14 @@
 import { Box, Flex, VStack } from "@chakra-ui/layout"
-import { Text, Heading } from "@chakra-ui/react"
+import { Heading,Text } from "@chakra-ui/react"
 import {
   GetStaticPaths,
   GetStaticProps,
   InferGetStaticPropsType,
   NextPage,
 } from "next"
-import { NextSeo } from "next-seo"
 import { useRouter } from "next/router"
+import { NextSeo } from "next-seo"
+
 import { BreadCrumb } from "../../components/breadcrumb"
 import { Layout } from "../../components/layout"
 import { SITE_URL } from "../../constants"

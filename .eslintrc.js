@@ -30,11 +30,10 @@ module.exports = {
     "import",
     "unused-imports",
     "cypress",
+    "simple-import-sort",
   ],
   root: true,
   rules: {
-    "sort-imports": 0,
-    "import/order": [2, { alphabetize: { order: "asc" } }],
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports-ts": "warn",
     // Typescript を使っているなら不要
@@ -43,6 +42,12 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     // 「// @ts-ignore」使っても怒られないようにする
     "@typescript-eslint/ban-ts-comment": "off",
+    // simple-import-sort の設定
+    // 'sort-imports' および 'import/order' と競合するのでこれらは使わないこと
+    "simple-import-sort/imports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
   },
   settings: {
     "import/resolver": {

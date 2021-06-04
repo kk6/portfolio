@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+
 import { IllustrationResponse } from "../types/illustrations"
 
 // @ts-ignore

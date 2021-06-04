@@ -6,9 +6,10 @@ import {
   StackDivider,
   VStack,
 } from "@chakra-ui/layout"
-import { Text, Heading } from "@chakra-ui/react"
-import { NextPage, GetStaticProps, InferGetStaticPropsType } from "next"
+import { Heading,Text } from "@chakra-ui/react"
+import { GetStaticProps, InferGetStaticPropsType,NextPage } from "next"
 import { NextSeo } from "next-seo"
+
 import { BlogCard } from "../../components/blog-card"
 import { Layout } from "../../components/layout"
 import { SITE_URL } from "../../constants"

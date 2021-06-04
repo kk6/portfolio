@@ -1,6 +1,7 @@
-import { Container, Heading, VStack, Text, Box } from "@chakra-ui/layout"
+import { Box,Container, Heading, Text, VStack } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
+
 import { Avatar } from "../components/avatar"
 import { Layout } from "../components/layout"
 import { ListBox } from "../components/list-box"
