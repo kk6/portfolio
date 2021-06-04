@@ -1,8 +1,8 @@
 import { ArrowRightIcon } from "@chakra-ui/icons"
-import { Flex, Heading, Link,SimpleGrid, Text } from "@chakra-ui/react"
+import { Flex, Heading, Link, SimpleGrid, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 
-import { Avatar } from "../components/avatar"
+import { Avatar } from "../elements/Avatar"
 
 export const Hero: React.FC = () => {
   return (

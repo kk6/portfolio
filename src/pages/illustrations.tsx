@@ -1,8 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { NextSeo } from "next-seo"
 
-import { ImageGallery } from "../components/image-gallery"
-import { Layout } from "../components/layout"
+import { DefaultLayout } from "../components/layouts/DefaultLayout"
+import { ImageGallery } from "../components/modules/ImageGallery"
 import { SITE_URL } from "../constants"
 import { IllustrationsResponse } from "../types/illustrations"
 import { client } from "../utils/api"
@@ -18,7 +18,7 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 const Illustration: NextPage<PageProps> = (props) => {
   return (
-    <Layout>
+    <DefaultLayout>
       <NextSeo
         title={title}
         description={description}
@@ -30,7 +30,7 @@ const Illustration: NextPage<PageProps> = (props) => {
         }}
       />
       <ImageGallery illustrations={props.illustrations.contents} />
-    </Layout>
+    </DefaultLayout>
   )
 }
 

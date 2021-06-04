@@ -2,8 +2,8 @@ import { Heading, VStack } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 
-import { ContactForm } from "../components/contact-form"
-import { Layout } from "../components/layout"
+import { DefaultLayout } from "../components/layouts/DefaultLayout"
+import { ContactForm } from "../components/modules/ContactForm"
 import { SITE_URL } from "../constants"
 
 const url = `${SITE_URL}/contact`
@@ -12,7 +12,7 @@ const description = "お問い合わせ"
 
 const Contact: NextPage = () => {
   return (
-    <Layout>
+    <DefaultLayout>
       <NextSeo
         title={title}
         description={description}
@@ -27,7 +27,7 @@ const Contact: NextPage = () => {
         <Heading>お問い合わせ</Heading>
         <ContactForm />
       </VStack>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

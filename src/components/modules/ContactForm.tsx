@@ -8,7 +8,7 @@ import { Input } from "@chakra-ui/input"
 import { VStack } from "@chakra-ui/layout"
 import { Textarea } from "@chakra-ui/textarea"
 import Router from "next/router"
-import { SubmitHandler,useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 
 const post_url = "https://ashiyahiro.microcms.io/api/v1/contacts"
 type FormValues = {

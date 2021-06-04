@@ -2,8 +2,8 @@ import { Container } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 
-import { Hero } from "../components/hero"
-import { Layout } from "../components/layout"
+import { DefaultLayout } from "../components/layouts/DefaultLayout"
+import { Hero } from "../components/modules/Hero"
 import { SITE_URL } from "../constants"
 
 const url = SITE_URL
@@ -12,7 +12,7 @@ const description = "ホーム"
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <DefaultLayout>
       <NextSeo
         title={title}
         description={description}
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <Container maxW="container.lg">
         <Hero />
       </Container>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

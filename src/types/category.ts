@@ -1,4 +1,4 @@
-import { ContentResponse,ContentsResponse } from "./api"
+import { ContentResponse, ContentsResponse } from "./api"
 import { TextField } from "./fields"
 
 export type CategoriesResponse = ContentsResponse<CategoryResponse>

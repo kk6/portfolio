@@ -1,10 +1,10 @@
 import { Container } from "@chakra-ui/layout"
 import { motion } from "framer-motion"
 
-import { Footer } from "../components/footer"
-import { Header } from "../components/header"
+import { Footer } from "../modules/Footer"
+import { Header } from "../modules/Header"
 
-export const Layout: React.FC = ({ children }) => (
+export const DefaultLayout: React.FC = ({ children }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}

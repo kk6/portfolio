@@ -2,7 +2,8 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons"
 import { Box, Flex, Text } from "@chakra-ui/react"
 import Link from "next/link"
 import { useState } from "react"
-import { SITE_NAME } from "../constants"
+
+import { SITE_NAME } from "../../constants"
 
 interface MenuItemProps {
   children: React.ReactNode
