@@ -1,1 +1,13 @@
-{"apiFields":[{"idValue":"AMuFeGVsAc","fieldId":"title","name":"サイトタイトル","kind":"text","required":true},{"fieldId":"cover","name":"カバーイメージ","kind":"media"}],"customFields":[]}
+{
+  "apiFields": [
+    {
+      "idValue": "AMuFeGVsAc",
+      "fieldId": "title",
+      "name": "サイトタイトル",
+      "kind": "text",
+      "required": true
+    },
+    { "fieldId": "cover", "name": "カバーイメージ", "kind": "media" }
+  ],
+  "customFields": []
+}

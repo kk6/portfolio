@@ -1,1 +1,26 @@
-{"apiFields":[{"idValue":"AtPcPIBqXl","fieldId":"email","name":"メールアドレス","kind":"text","required":true,"isUnique":false},{"fieldId":"name","name":"お名前","kind":"text","required":true,"isUnique":false},{"fieldId":"body","name":"お問い合わせ内容","kind":"textArea","required":true}],"customFields":[]}
+{
+  "apiFields": [
+    {
+      "idValue": "AtPcPIBqXl",
+      "fieldId": "email",
+      "name": "メールアドレス",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "name",
+      "name": "お名前",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "body",
+      "name": "お問い合わせ内容",
+      "kind": "textArea",
+      "required": true
+    }
+  ],
+  "customFields": []
+}
