@@ -11,10 +11,11 @@ import { NextPage, GetStaticProps, InferGetStaticPropsType } from "next"
 import { NextSeo } from "next-seo"
 import { BlogCard } from "../../components/blog-card"
 import { Layout } from "../../components/layout"
+import { SITE_URL } from "../../constants"
 import { BlogsResponse } from "../../types/blog"
 import { client } from "../../utils/api"
 
-const url = "https://ashiyahiro-portfolio.vercel.app/blog"
+const url = `${SITE_URL}/blog`
 const title = "Blog"
 const description = "記事一覧"
 
@@ -49,7 +50,7 @@ const Blogs: NextPage<PageProps> = (props) => {
             align="stretch"
             w="container.md"
           >
-            {posts ? (
+            {posts.contents.length > 0 ? (
               posts.contents.map((p) => (
                 <ListItem key={p.id}>
                   <BlogCard

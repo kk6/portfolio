@@ -10,6 +10,7 @@ import { NextSeo } from "next-seo"
 import { useRouter } from "next/router"
 import { BreadCrumb } from "../../components/breadcrumb"
 import { Layout } from "../../components/layout"
+import { SITE_URL } from "../../constants"
 import { BlogResponse } from "../../types/blog"
 import { client } from "../../utils/api"
 import { formatDate } from "../../utils/date"
@@ -31,7 +32,7 @@ const Blog: NextPage<PageProps> = (props) => {
   const { post } = props
   const title = post.title
   const description = post.description
-  const url = `https://ashiyahiro-portfolio.vercel.app/blog/${post.id}`
+  const url = `${SITE_URL}/blog/${post.id}`
   const breadCrumbItems = [
     { text: "Home", path: "/", isCurrentPage: false },
     { text: "Blog", path: "/blog/", isCurrentPage: false },

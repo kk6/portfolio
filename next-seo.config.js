@@ -1,15 +1,17 @@
-const title = "あしやひろ – Developer, Illustrator."
+import { AUTHOR_NAME, SITE_NAME, SITE_URL } from "./src/constants"
+
+const title = `${AUTHOR_NAME} – Developer, Illustrator.`
 const description = "個人的なポートフォリオサイトです。"
 
 const SEO = {
   title,
-  titleTemplate: "%s | Ashiyahiro.work",
+  titleTemplate: `%s | ${SITE_NAME}`,
   description,
-  canonical: "https://ashiyahiro-portfolio.vercel.app",
+  canonical: SITE_URL,
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    url: "https://ashiyahiro-portfolio.vercel.app",
+    url: SITE_URL,
     title,
     description,
   },

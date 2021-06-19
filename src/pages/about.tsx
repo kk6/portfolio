@@ -4,8 +4,9 @@ import { NextSeo } from "next-seo"
 import { Avatar } from "../components/avatar"
 import { Layout } from "../components/layout"
 import { ListBox } from "../components/list-box"
+import { SITE_URL } from "../constants"
 
-const url = "https://ashiyahiro-portfolio.vercel.app/about"
+const url = `${SITE_URL}/about`
 const title = "About"
 const description = "あしやひろについて"
 

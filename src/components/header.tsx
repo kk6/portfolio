@@ -2,6 +2,7 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons"
 import { Flex, Box, Text } from "@chakra-ui/react"
 import Link from "next/link"
 import { useState } from "react"
+import { SITE_NAME } from "../constants"
 
 interface MenuItemProps {
   children: React.ReactNode
@@ -37,7 +38,7 @@ export const Header: React.FC = () => {
       <Box w="200px">
         <Text fontSize="lg" fontWeight="bold">
           <Link href="/">
-            <a>Ashiyahiro.work</a>
+            <a>{SITE_NAME}</a>
           </Link>
         </Text>
       </Box>

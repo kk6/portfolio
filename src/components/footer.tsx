@@ -2,10 +2,11 @@ import { Box, Stack, Text, TextProps } from "@chakra-ui/layout"
 import { ButtonGroup, ButtonGroupProps, IconButton } from "@chakra-ui/react"
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa"
 import { SiPixiv } from "react-icons/si"
+import { AUTHOR_NAME } from "../constants"
 
 const Copyright: React.FC<TextProps> = (props) => (
   <Text fontSize="sm" {...props}>
-    &copy; {new Date().getFullYear()} あしやひろ All rights reserved.
+    &copy; {new Date().getFullYear()} {AUTHOR_NAME} All rights reserved.
   </Text>
 )
 

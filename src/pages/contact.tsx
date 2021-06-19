@@ -3,8 +3,9 @@ import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 import { ContactForm } from "../components/contact-form"
 import { Layout } from "../components/layout"
+import { SITE_URL } from "../constants"
 
-const url = "https://ashiyahiro-portfolio.vercel.app/contact"
+const url = `${SITE_URL}/contact`
 const title = "Contact"
 const description = "お問い合わせ"
 

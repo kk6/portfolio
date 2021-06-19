@@ -2,10 +2,11 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { NextSeo } from "next-seo"
 import { ImageGallery } from "../components/image-gallery"
 import { Layout } from "../components/layout"
+import { SITE_URL } from "../constants"
 import { IllustrationsResponse } from "../types/illustrations"
 import { client } from "../utils/api"
 
-const url = "https://ashiyahiro-portfolio.vercel.app/illustrations"
+const url = `${SITE_URL}/illustrations`
 const title = "Illustrations"
 const description = "作品一覧"
 

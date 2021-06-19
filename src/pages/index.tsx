@@ -3,8 +3,9 @@ import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 import { Hero } from "../components/hero"
 import { Layout } from "../components/layout"
+import { SITE_URL } from "../constants"
 
-const url = "https://ashiyahiro-portfolio.vercel.app"
+const url = SITE_URL
 const title = "Home"
 const description = "ホーム"
 
