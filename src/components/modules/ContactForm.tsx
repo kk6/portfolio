@@ -65,14 +65,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           </FormErrorMessage>
         </FormControl>
         <FormControl id="name" isInvalid={errors.name !== undefined}>
-          <FormLabel htmlFor="email">お名前</FormLabel>
+          <FormLabel htmlFor="name">お名前</FormLabel>
           <Input type="text" {...register("name", { required: true })} />
           <FormErrorMessage>
             {errors.name?.type === "required" && "必須項目です"}
           </FormErrorMessage>
         </FormControl>
         <FormControl id="body" isInvalid={errors.body !== undefined}>
-          <FormLabel htmlFor="email">お問い合わせ内容</FormLabel>
+          <FormLabel htmlFor="body">お問い合わせ内容</FormLabel>
           <Textarea
             placeholder="お仕事のご依頼の場合はなるべく詳細にお書きください。"
             {...register("body", { required: true })}
