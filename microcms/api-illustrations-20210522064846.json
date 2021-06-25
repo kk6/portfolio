@@ -1,1 +1,15 @@
-{"apiFields":[{"idValue":"EU6-OnYLJT","fieldId":"title","name":"タイトル","kind":"text","required":true,"isUnique":false},{"fieldId":"image","name":"画像","kind":"media","required":true},{"fieldId":"posted_at","name":"投稿日","kind":"date"}],"customFields":[]}
+{
+  "apiFields": [
+    {
+      "idValue": "EU6-OnYLJT",
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    { "fieldId": "image", "name": "画像", "kind": "media", "required": true },
+    { "fieldId": "posted_at", "name": "投稿日", "kind": "date" }
+  ],
+  "customFields": []
+}

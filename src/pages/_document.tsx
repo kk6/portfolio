@@ -1,11 +1,11 @@
 import NextDocument, {
-  Html,
+  DocumentContext,
+  DocumentInitialProps,
+  DocumentProps,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
-  DocumentProps,
-  DocumentInitialProps,
 } from "next/document"
 
 class Document extends NextDocument<DocumentProps> {

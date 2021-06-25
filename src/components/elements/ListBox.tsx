@@ -1,6 +1,6 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons"
-import { Heading, Box } from "@chakra-ui/layout"
-import { Link, ListItem, UnorderedList, Text } from "@chakra-ui/react"
+import { Box, Heading } from "@chakra-ui/layout"
+import { Link, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 
 type TItem = {
   url: string

@@ -1,9 +1,10 @@
-import { Container, Heading, VStack, Text, Box } from "@chakra-ui/layout"
+import { Box, Container, Heading, Text, VStack } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
-import { Avatar } from "../components/avatar"
-import { Layout } from "../components/layout"
-import { ListBox } from "../components/list-box"
+
+import { Avatar } from "../components/elements/Avatar"
+import { ListBox } from "../components/elements/ListBox"
+import { DefaultLayout } from "../components/layouts/DefaultLayout"
 import { SITE_URL } from "../constants"
 
 const url = `${SITE_URL}/about`
@@ -45,7 +46,7 @@ const works = {
 
 const About: NextPage = () => {
   return (
-    <Layout>
+    <DefaultLayout>
       <NextSeo
         title={title}
         description={description}
@@ -93,7 +94,7 @@ const About: NextPage = () => {
           </VStack>
         </VStack>
       </Container>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

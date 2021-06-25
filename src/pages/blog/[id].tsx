@@ -1,15 +1,16 @@
 import { Box, Flex, VStack } from "@chakra-ui/layout"
-import { Text, Heading } from "@chakra-ui/react"
+import { Heading, Text } from "@chakra-ui/react"
 import {
   GetStaticPaths,
   GetStaticProps,
   InferGetStaticPropsType,
   NextPage,
 } from "next"
-import { NextSeo } from "next-seo"
 import { useRouter } from "next/router"
-import { BreadCrumb } from "../../components/breadcrumb"
-import { Layout } from "../../components/layout"
+import { NextSeo } from "next-seo"
+
+import { BreadCrumb } from "../../components/elements/BreadCrumb"
+import { DefaultLayout } from "../../components/layouts/DefaultLayout"
 import { SITE_URL } from "../../constants"
 import { BlogResponse } from "../../types/blog"
 import { client } from "../../utils/api"
@@ -44,7 +45,7 @@ const Blog: NextPage<PageProps> = (props) => {
   }
 
   return (
-    <Layout>
+    <DefaultLayout>
       <NextSeo
         title={title}
         description={description}
@@ -75,7 +76,7 @@ const Blog: NextPage<PageProps> = (props) => {
       <Flex maxW="container.xl" justify="center" p={4}>
         <BreadCrumb items={breadCrumbItems} />
       </Flex>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

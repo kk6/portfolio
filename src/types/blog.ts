@@ -1,4 +1,4 @@
-import { ContentsResponse, ContentResponse } from "./api"
+import { ContentResponse, ContentsResponse } from "./api"
 import { CategoryResponse } from "./category"
 import { RichEdit, TextField } from "./fields"
 import { ImageResponse } from "./image"

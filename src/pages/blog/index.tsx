@@ -6,11 +6,12 @@ import {
   StackDivider,
   VStack,
 } from "@chakra-ui/layout"
-import { Text, Heading } from "@chakra-ui/react"
-import { NextPage, GetStaticProps, InferGetStaticPropsType } from "next"
+import { Heading, Text } from "@chakra-ui/react"
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { NextSeo } from "next-seo"
-import { BlogCard } from "../../components/blog-card"
-import { Layout } from "../../components/layout"
+
+import { DefaultLayout } from "../../components/layouts/DefaultLayout"
+import { BlogCard } from "../../components/modules/BlogCard"
 import { SITE_URL } from "../../constants"
 import { BlogsResponse } from "../../types/blog"
 import { client } from "../../utils/api"
@@ -27,7 +28,7 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 const Blogs: NextPage<PageProps> = (props) => {
   const { posts } = props
   return (
-    <Layout>
+    <DefaultLayout>
       <NextSeo
         title={title}
         description={description}
@@ -68,7 +69,7 @@ const Blogs: NextPage<PageProps> = (props) => {
           </VStack>
         </Flex>
       </Container>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

@@ -8,38 +8,42 @@ import { Input } from "@chakra-ui/input"
 import { VStack } from "@chakra-ui/layout"
 import { Textarea } from "@chakra-ui/textarea"
 import Router from "next/router"
-import { useForm, SubmitHandler } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 
-const post_url = "https://ashiyahiro.microcms.io/api/v1/contacts"
+type ContactFormProps = {
+  url: string
+  requestHeaders: HeadersInit
+}
+
 type FormValues = {
   email: string
   name: string
   body: string
 }
 
-export const ContactForm: React.FC = () => {
+export const ContactForm: React.FC<ContactFormProps> = ({
+  url,
+  requestHeaders,
+}) => {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>()
 
-  const requestHeaders: HeadersInit = new Headers()
-  requestHeaders.set("Accept", "application/json")
-  requestHeaders.set("Content-Type", "application/json")
-  requestHeaders.set(
-    "X-WRITE-API-KEY",
-    process.env.NEXT_PUBLIC_MICRO_CMS_WRITE_API_KEY || ""
-  )
-
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     return new Promise((resolve) => {
-      fetch(post_url, {
+      fetch(url, {
         method: "POST",
         body: JSON.stringify(data),
         headers: requestHeaders,
       })
-        .then(() => {
+        .then((response) => {
+          if (!response.ok) {
+            return response.json().then(function (err) {
+              throw Error(err.message)
+            })
+          }
           alert("お問い合わせを受け付けました")
           Router.reload()
         })
