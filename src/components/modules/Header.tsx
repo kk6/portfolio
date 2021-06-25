@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
           pt={[4, 4, 0, 0]}
         >
           <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/illustrations">Illustration</MenuItem>
+          <MenuItem to="/illustration">Illustration</MenuItem>
           <MenuItem to="/blog">Blog</MenuItem>
           <MenuItem to="/about">About</MenuItem>
           <MenuItem to="/contact" isLast>

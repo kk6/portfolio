@@ -18,7 +18,7 @@ context("/ - Home", () => {
   })
   it("イラストギャラリーへのナビゲーションが正しい", () => {
     cy.get("[data-cy=nav-item]").contains("Illustration").click()
-    cy.url().should("include", "/illustrations")
+    cy.url().should("include", "/illustration")
   })
   it("ブログへのナビゲーションが正しい", () => {
     cy.get("[data-cy=nav-item]").contains("Blog").click()

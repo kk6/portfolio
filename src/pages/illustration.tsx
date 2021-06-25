@@ -7,8 +7,8 @@ import { SITE_URL } from "../constants"
 import { IllustrationsResponse } from "../types/illustrations"
 import { client } from "../utils/api"
 
-const url = `${SITE_URL}/illustrations`
-const title = "Illustrations"
+const url = `${SITE_URL}/illustration`
+const title = "Illustration"
 const description = "作品一覧"
 
 type StaticProps = {
