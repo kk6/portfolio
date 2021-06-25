@@ -11,6 +11,15 @@ const title = "Contact"
 const description = "お問い合わせ"
 
 const Contact: NextPage = () => {
+  const postUrl = "https://ashiyahiro.microcms.io/api/v1/contacts"
+  const requestHeaders: HeadersInit = new Headers()
+  requestHeaders.set("Accept", "application/json")
+  requestHeaders.set("Content-Type", "application/json")
+  requestHeaders.set(
+    "X-WRITE-API-KEY",
+    process.env.NEXT_PUBLIC_MICRO_CMS_WRITE_API_KEY || ""
+  )
+
   return (
     <DefaultLayout>
       <NextSeo
@@ -25,7 +34,7 @@ const Contact: NextPage = () => {
       />
       <VStack>
         <Heading>お問い合わせ</Heading>
-        <ContactForm />
+        <ContactForm url={postUrl} requestHeaders={requestHeaders} />
       </VStack>
     </DefaultLayout>
   )
