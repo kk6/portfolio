@@ -17,6 +17,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ children, isLast, to = "/" }) => {
       mb={{ base: isLast ? 0 : 8, sm: 0 }}
       mr={{ base: 0, sm: isLast ? 0 : 8 }}
       display="block"
+      data-cy="nav-item"
     >
       <Link href={to}>{children}</Link>
     </Text>
@@ -39,7 +40,7 @@ export const Header: React.FC = () => {
       <Box w="200px">
         <Text fontSize="lg" fontWeight="bold">
           <Link href="/">
-            <a>{SITE_NAME}</a>
+            <a data-cy="site-name">{SITE_NAME}</a>
           </Link>
         </Text>
       </Box>
