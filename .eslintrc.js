@@ -14,6 +14,10 @@ module.exports = {
     "plugin:cypress/recommended",
     "prettier",
   ],
+  ignorePatterns: [
+    // Storybook の設定フォルダを追加する
+    "!.storybook",
+  ],
   parser: "@typescript-eslint/parser",
   // jsx を使用
   parserOptions: {
