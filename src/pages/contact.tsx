@@ -1,4 +1,4 @@
-import { Heading, VStack } from "@chakra-ui/layout"
+import { Box, Heading, Text, VStack } from "@chakra-ui/layout"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 
@@ -35,6 +35,15 @@ const Contact: NextPage = () => {
       <VStack>
         <Heading>お問い合わせ</Heading>
         <ContactForm url={postUrl} requestHeaders={requestHeaders} />
+        <Box>
+          <Text>
+            フォームに問題がある場合などは直接&nbsp;
+            <a href="mailto:hiro.ashiya@gmail.com">
+              hiro.ashiya@gmail.com
+            </a>{" "}
+            までメールでお問い合わせ下さい。
+          </Text>
+        </Box>
       </VStack>
     </DefaultLayout>
   )
