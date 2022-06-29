@@ -13,7 +13,7 @@ import { NextSeo } from "next-seo"
 import { DefaultLayout } from "../components/layouts/DefaultLayout"
 import { Hero } from "../components/modules/Hero"
 import { SITE_URL } from "../constants"
-import { getCurrentNews } from "../lib/api"
+import { getCurrentNews } from "../libs/api"
 import { BlogsResponse } from "../types/blog"
 import { formatDate } from "../utils/date"
 
