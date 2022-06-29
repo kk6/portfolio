@@ -21,6 +21,20 @@ type FormValues = {
   body: string
 }
 
+const handleErrors = async (response: Response) => {
+  if (!response.ok) {
+    if (response.status === 429) {
+      throw Error(
+        "現在フォームが利用できません。お手数ですがメールにてお問い合わせ下さい。"
+      )
+    }
+    return response.json().then((err) => {
+      throw Error(err.message)
+    })
+  }
+  return response.json()
+}
+
 export const ContactForm: React.FC<ContactFormProps> = ({
   url,
   requestHeaders,
@@ -28,7 +42,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isDirty, isSubmitted },
   } = useForm<FormValues>()
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
@@ -38,12 +52,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         body: JSON.stringify(data),
         headers: requestHeaders,
       })
-        .then((response) => {
-          if (!response.ok) {
-            return response.json().then(function (err) {
-              throw Error(err.message)
-            })
-          }
+        .then(handleErrors)
+        .then((json) => {
           alert("お問い合わせを受け付けました")
           Router.reload()
         })
@@ -59,7 +69,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       <VStack width="60vw">
         <FormControl id="email" isInvalid={errors.email !== undefined}>
           <FormLabel htmlFor="email">メールアドレス</FormLabel>
-          <Input type="email" {...register("email", { required: true })} />
+          <Input
+            type="email"
+            {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+          />
           <FormErrorMessage>
             {errors.email?.type === "required" && "必須項目です"}
           </FormErrorMessage>
@@ -82,7 +95,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           </FormErrorMessage>
         </FormControl>
         <ButtonGroup>
-          <Button type="submit" isLoading={isSubmitting} colorScheme="purple">
+          <Button
+            type="submit"
+            isLoading={isSubmitting}
+            disabled={!isDirty || isSubmitted}
+            colorScheme="purple"
+          >
             送信
           </Button>
         </ButtonGroup>
